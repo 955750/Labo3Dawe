@@ -5,10 +5,7 @@ class ArrayOrdenado {
     }
 
     findPos(elt) {
-        for (var i = 0; i < this.contenido.length; i++) {
-            if (this.comparador (elt, this.contenido [i]) < 0) break
-        }
-        return i
+        return this.contenido.findIndex((x) => this.comparador(elt, x) < 0)
     }
 
     insert(elt) {
